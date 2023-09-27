@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1Apa | awk 'NR>1 { printf("%s, ", previous) } { previous=$0 } END { printf("%s", previous) }'
+ls -1Apa | awk 'NR>1 { printf(", ") } { printf("%s", $0) } END { print "" }'
