@@ -1,2 +1,2 @@
 #!/bin/bash
-alias ls="__ls__"
+alias __ls__=ls
