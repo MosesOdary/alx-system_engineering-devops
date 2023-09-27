@@ -1,3 +1,2 @@
 #!/bin/bash
-cd /tmp/sym
 cd /tmp/sym ; alias __ls__=ls
