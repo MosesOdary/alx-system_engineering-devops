@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1Ap | awk '{ printf("%s, ", $0) } END { print "" }'
+ls -1Apa | awk '{ printf("%s, ", $0) } END { print "" }'
