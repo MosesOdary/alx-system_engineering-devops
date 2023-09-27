@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -name "*.html" -type f -newermt "$(date -r "$(dirname "$PWD")" +"%F %T")" -exec cp -u {} "$(dirname "$PWD")" \;
+find . -name "*.html" -type f -newermt "$(date -r "$(dirname "$PWD")" +"%F %T")" -exec cp -u {} "$(dirname "$PWD")"
