@@ -1,2 +1,2 @@
 #!/bin/bash
-cd /tmp/sym ; alias __ls__=ls
+alias __ls__=/bin/ls 
