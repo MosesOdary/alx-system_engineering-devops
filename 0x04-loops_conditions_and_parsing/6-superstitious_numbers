@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# case statements
+# Display numbers from 1 to 20
 
 i=0
 while [ $i -lt 21 ]
