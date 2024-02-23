@@ -1,4 +1,27 @@
 #!/usr/bin/env bash
-# 
+# Make file /var/run/myscript.pid having script PID
+# Echo "To infinity and beyond" indefinitely
+# Echo "I hate the kill command" after getting a SIGTERM
+# Echo "Y U no love me?!" after getting a SIGINT
+# Remove the /var/run/myscript.pid file and exit 
+# after getting a SIGQUIT or SIGTERM
 
 
+file="/var/run/myscript.pid"
+
+if [ ! -e "$file" ]; then
+	touch "$file"
+fi
+
+sleep 2 &
+
+echo "$!" > "$file"
+
+trap 'echo "I hate the kill command"; rm "$file"; exit' SIGTERM SIGQUIT
+
+trap "echo Y U no love me?!" SIGINT
+
+while true; do
+	echo "To infinity and beyond"
+	sleep 2
+done

@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# 
+# Lists all processes running on the system owned by current user
 
-
+ps -aux | grep bash
