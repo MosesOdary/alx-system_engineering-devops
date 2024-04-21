@@ -10,7 +10,7 @@ file_line { 'SSH Private Key':
 
 file_line { 'Deny Password Authentication':
   path                => '/etc/ssh/ssh_config',
-  line                => 'passwordAuthentication no',
+  line                => 'PasswordAuthentication no',
   match               => '^[#]+[\s]*(?i)PasswordAuthentication[\s]+(yes|no)$',
   replace             => true,
   append_on_no_match  => true
