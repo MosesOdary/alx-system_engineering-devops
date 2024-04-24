@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Configure a new Ubuntu machine
+
+sudo apt -y update
+sudo apt -y install nginx
+
+sudo sh -c 'echo -e "Ceci n'\''est pas une page" > /usr/share/nginx/html/404.html'
+
+sudo sed -i '/listen 80 default_server;/ a \\terror_page 404 /404.html;' /etc/nginx/sites-available/default
+
+sudo service nginx restart
