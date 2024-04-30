@@ -13,8 +13,8 @@ frontend web-frontend
 backend web-backend
    mode http
    balance roundrobin
-   server 531512-web-01 100.26.156.161:80 check
-   server 531512-web-02 18.207.139.51:80 check
+   server 531512-web-01 100.26.156.161 check port 80
+   server 531512-web-02 18.207.139.51 check port 80
 " | sudo tee -a /etc/haproxy/haproxy.cfg
 
 sudo chmod +x /etc/init.d/haproxy
