@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Install and configure HAproxy on load balancer
+
+
