@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Display information about subdomains.
+# Display subdomain info
 
  func () {
     if [ -n "$2" ]
