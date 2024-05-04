@@ -35,14 +35,14 @@ defaults
 
 frontend web-frontend
         bind *:80
-        bind *:443 ssl crt /etc/ssl/www.www.odary.tech/www.www.odary.tech.pem
+        bind *:443 ssl crt /etc/haproxy/certs/odary.tech.pem
         # Redirect if HTTPS is *not* used
         redirect scheme https code 301 if !{ ssl_fc }
         mode http
         default_backend web-backend
 
+
 backend web-backend
-        mode http
-        balance roundrobin
-        server 531512-web-01 100.26.156.161:80 check
-        server 531512-web-02 18.207.139.51:80 check
+   balance roundrobin
+   server 531512-web-01 100.26.156.161:80 check
+   server 531512-web-02 18.207.139.51:80 check
