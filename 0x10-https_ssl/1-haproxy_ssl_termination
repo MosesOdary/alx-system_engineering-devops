@@ -33,14 +33,15 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
+
 frontend web-frontend
-        bind *:80
-        bind *:443 ssl crt /etc/ssl/www.odary.tech/www.odary.tech.pem
-        mode http
-        default_backend web-backend
+   bind *:80
+   mode http
+   default_backend web-backend
 
 backend web-backend
-        mode http
-        balance roundrobin
-        server 531512-web-01 100.26.156.161:80 check
-        server 531512-web-02 18.207.139.51:80 check
+   mode http
+   balance roundrobin
+   server 531512-web-01 100.26.156.161 check port 80
+   server 531512-web-02 18.207.139.51 check port 80
+   
