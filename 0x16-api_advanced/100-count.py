@@ -4,7 +4,8 @@ import requests
 
 
 def count_words(subreddit, word_list, found_list=[], after=None):
-    '''    Prints counts of given words found in hot posts of a given subreddit.    '''
+    '''    Prints counts of given words found in
+    hot posts of a given subreddit.    '''
     user_agent = {'User-agent': 'test45'}
     posts = requests.get('http://www.reddit.com/r/{}/hot.json?after={}'
                          .format(subreddit, after), headers=user_agent)
